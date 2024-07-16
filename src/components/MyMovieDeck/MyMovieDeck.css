@@ -1,0 +1,17 @@
+.movieDeck {
+  text-align: center;
+  padding: 20px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type="text"],
+select {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+}

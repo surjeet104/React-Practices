@@ -1,0 +1,22 @@
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px;
+  margin: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-info h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}

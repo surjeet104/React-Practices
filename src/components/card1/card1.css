@@ -1,0 +1,137 @@
+.cards-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.header-content p {
+  margin: 5px 0 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.nav-button:hover {
+  background-color: #e9ecef;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 24%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-image {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 0 0 10px;
+}
+
+.card-topics {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.card-asked {
+  font-size: 0.8em;
+  color: #999;
+  margin: 0 0 10px;
+}
+
+.company-logos {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.company-logos img {
+  width: 30px;
+  height: 30px;
+}
+
+.practice-button {
+    width: 100%;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.practice-button:hover {
+  background-color: #0056b3;
+}
+
+.image-cont{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.completed-btn{
+    width: 40%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #c4bbbb;
+}

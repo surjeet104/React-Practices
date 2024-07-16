@@ -1,0 +1,24 @@
+.bill-details {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.bill-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bill-item .saved {
+  color: #28a745;
+  font-size: 12px;
+}
+
+.bill-item .free {
+  color: #28a745;
+}
+
+.grand-total {
+  font-weight: bold;
+  font-size: 18px;
+}
