@@ -17,6 +17,7 @@ import MyJSXExample from './components/MyJSXExample/MyJSXExample';
 // import CreateAccount from './components/CreateAccount/CreateAccount';
 import GitHubUserSearch from './components/GitHubUserSearch/GitHubUserSearch';
 import Listing from './components/Listing/Listing';
+import MyListing from './components/MyListing/MyListing';
 
 function App() {
   return (
@@ -31,13 +32,14 @@ function App() {
      {/* <Card3/> */}
      {/* <JSXExample/> */}
      {/* <MyJSXExample/> */}
-     {/* <MovieDeck/> */}
+     <MovieDeck/>
      {/* <MyMovieDeck/> */}
      {/* <PropsExample/> */}
      {/* <ColorChanger/> */}
      {/* <CreateAccount /> */}
-     <GitHubUserSearch/>
+     {/* <GitHubUserSearch/> */}
      {/* <Listing/> */}
+     {/* <MyListing/> */}
     </div>
   );
 }

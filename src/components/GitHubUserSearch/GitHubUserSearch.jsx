@@ -9,7 +9,13 @@ function GitHubUserSearch() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const a=[2,2,2,2,24,1,1,1,1,1,3,3,3].map((item)=>{
 
+    if(item%2===0)
+    
+    return true;
+    
+    })  ;
   const handleSearch = async () => {
     try {
       const response = await fetch(

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./MyMovieDeck.css";
 import Button from "../button";
 import MovieCard from "./MovieCard";
@@ -8,19 +8,64 @@ const API_URL =
 
 function MyMovieDeck() {
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOption, setSortOption] = useState('default');
+  // const [filteredMovies, setFilteredMovies] = useState([]);
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
+
+  // useEffect(() => {
+  //   filterMovies();
+  // }, [searchTerm]);
 
   const fetchMovies = async () => {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    setMovies(data.results);
-    console.log(data.results)
+    try {
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      setMovies(data.results);
+      // setFilteredMovies(data.results);
+    } catch (error) {
+      console.error("Failed to fetch movies....", error);
+    }
+  };
+
+  const filterMovies = 
+  // () => {
+    // const updatedMovies = 
+    movies.filter((movie) =>
+      movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    // setFilteredMovies(updatedMovies);
+  // };
+
+  const handleSort=(e)=>{
+    setSortOption(e.target.value);
+  }
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
   };
   return (
     <div className="movieDeck">
       <h1>Movie Deck</h1>
-      <Button buttonText="Fetch Movies" handleClick={fetchMovies} />
+      {/* <Button buttonText="Fetch Movies" handleClick={fetchMovies} /> */}
+      <input
+        type="text"
+        placeholder="Search Movies..."
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+      <select onChange={handleSort}>
+        <option value="default">Sort by</option>
+        <option value="ratingAscending">Rating Ascending</option>
+        <option value="ratingDescending">Rating Descending</option>
+        <option value="votesAscending">Votes Ascending</option>
+        <option value="votesDescending">Votes Descending</option>
+      </select>
       <div className="movie-list">
-        {movies.map((movie) => (
+        {filterMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
